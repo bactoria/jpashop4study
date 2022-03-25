@@ -1,5 +1,6 @@
 package com.example.jpashop
 
+import com.example.jpashop.domain.Member
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
