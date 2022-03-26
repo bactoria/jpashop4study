@@ -39,6 +39,12 @@ abstract class Item(
 		}
 		this.stockQuantity = restStock // FIXME : 재고관리 이런식으로 하면 동시성 이슈 생길 것 같은데...?
 	}
+
+	fun change(price: Int, name: String, stockQuantity: Int) {
+		this.price = price
+		this.name = name
+		this.stockQuantity = stockQuantity
+	}
 }
 
 // FIXME: noArg 설정 추가되면 nullable  제거해야함. 디폴트생성자 땜에 nullable로 했었음...

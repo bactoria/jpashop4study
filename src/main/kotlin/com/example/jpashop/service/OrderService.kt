@@ -7,6 +7,7 @@ import com.example.jpashop.domain.delivery.DeliveryStatus
 import com.example.jpashop.repository.ItemRepository
 import com.example.jpashop.repository.MemberRepository
 import com.example.jpashop.repository.OrderRepository
+import com.example.jpashop.repository.OrderSearch
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
@@ -41,7 +42,7 @@ class OrderService(
 
 		// 주문 저장
 		orderRepository.save(order)
-		
+
 		return order.id!!
 	}
 
@@ -52,8 +53,12 @@ class OrderService(
 	fun cancelOrder(orderId: Long) {
 		// 주문 엔티티 조회
 		val order = orderRepository.findOne(orderId)
-		
+
 		// 주문 취소
 		order.cancel()
+	}
+
+	fun findOrders(orderSearch: OrderSearch): List<Order> {
+		return orderRepository.findAllByCriteria(orderSearch)
 	}
 }
