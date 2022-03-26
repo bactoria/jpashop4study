@@ -10,11 +10,15 @@ class Delivery(
 	var id: Long? = null,
 
 	@OneToOne(mappedBy = "delivery", fetch = FetchType.LAZY)
-	var order: Order,
+	var order: Order? = null,
 
 	@Embedded
 	var address: Address,
 
 	@Enumerated(EnumType.STRING)
 	var status: DeliveryStatus
-)
+) {
+	fun isComp(): Boolean {
+		return this.status === DeliveryStatus.COMP
+	}
+}
