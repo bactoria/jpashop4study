@@ -1,0 +1,24 @@
+###
+POST {{host}}/api/v2/members
+Content-Type: application/json
+
+{
+  "name": "hello",
+  "city": "서울",
+  "street": "송파구",
+  "zipcode": "12345"
+}
+
+###
+PUT {{host}}/api/v2/members/1
+Content-Type: application/json
+
+{
+  "name": "hello2",
+  "city": "서울",
+  "street": "송파구",
+  "zipcode": "12345"
+}
+
+###
+GET {{host}}/api/v2/members
