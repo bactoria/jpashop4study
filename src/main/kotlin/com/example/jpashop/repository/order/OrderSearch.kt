@@ -1,4 +1,4 @@
-package com.example.jpashop.repository
+package com.example.jpashop.repository.order
 
 import com.example.jpashop.domain.OrderStatus
 

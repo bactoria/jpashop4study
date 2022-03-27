@@ -1,0 +1,5 @@
+###
+GET {{host}}/api/v3/simple-orders
+
+###
+GET {{host}}/api/v4/simple-orders

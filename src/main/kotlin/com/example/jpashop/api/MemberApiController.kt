@@ -45,8 +45,6 @@ class MemberApiController(
 			.toList()
 		return Result(collect.size, collect)
 	}
-
-
 }
 
 class Result<T>(

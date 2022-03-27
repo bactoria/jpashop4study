@@ -6,7 +6,7 @@ import com.example.jpashop.domain.delivery.Address
 import com.example.jpashop.domain.item.Book
 import com.example.jpashop.domain.item.Item
 import com.example.jpashop.exception.NotEnoughStockException
-import com.example.jpashop.repository.OrderRepository
+import com.example.jpashop.repository.order.OrderRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.assertj.core.api.Assertions.assertThatThrownBy
 import org.junit.jupiter.api.Test

@@ -1,6 +1,6 @@
 package com.example.jpashop.controller
 
-import com.example.jpashop.repository.OrderSearch
+import com.example.jpashop.repository.order.OrderSearch
 import com.example.jpashop.service.ItemService
 import com.example.jpashop.service.MemberService
 import com.example.jpashop.service.OrderService

@@ -1,4 +1,4 @@
-package com.example.jpashop.repository
+package com.example.jpashop.repository.order
 
 import com.example.jpashop.domain.Order
 import com.example.jpashop.domain.OrderStatus
@@ -42,5 +42,13 @@ class OrderRepository(
 		cq.where(cb.and(*criteria.toTypedArray()))
 		val query: TypedQuery<Order> = em.createQuery(cq).setMaxResults(10000)
 		return query.resultList
+	}
+
+	fun findAllWithMemberDelivery(): List<Order> {
+		return em.createQuery(
+			"select o from Order o" +
+					" join o.member m" +
+					" join o.delivery d", Order::class.java
+		).resultList
 	}
 }

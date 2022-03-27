@@ -6,8 +6,8 @@ import com.example.jpashop.domain.delivery.Delivery
 import com.example.jpashop.domain.delivery.DeliveryStatus
 import com.example.jpashop.repository.ItemRepository
 import com.example.jpashop.repository.MemberRepository
-import com.example.jpashop.repository.OrderRepository
-import com.example.jpashop.repository.OrderSearch
+import com.example.jpashop.repository.order.OrderRepository
+import com.example.jpashop.repository.order.OrderSearch
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
